@@ -1,0 +1,66 @@
+﻿@using FourZero.Pages
+
+
+<link rel="stylesheet" href="css/StylesCustom.css" />
+
+
+<MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="MyCustomTheme" />
+<a href="/">
+    <img src="@CurrentImage" alt="FourZero4" style="height: 50px; width: auto; display: flex; align-items: center; ">
+</a>
+<a href="/" class="mud-typography-h4" Style="color:#AEEA00; font-weight:bold; font-family:'Arial',sans-serif;">FourZero4</a>
+<MudSpacer />
+
+<MudToggleIconButton @bind-Toggled="_isDarkMode" Icon="@Icons.Material.Filled.DarkMode" Color="Color.Default"
+ToggledIcon="@Icons.Material.Filled.WbSunny" ToggledColor="@Color.Warning"/>
+
+
+
+
+
+@code {
+
+
+
+    MudTheme MyCustomTheme = new MudTheme()
+        {
+            PaletteLight = new PaletteLight()
+            {
+                Primary = Colors.Shades.Black,
+                Secondary = Colors.Shades.Black,
+                AppbarBackground = Colors.Gray.Lighten5,
+                Background = Colors.Gray.Lighten2,
+            },
+            PaletteDark = new PaletteDark()
+            {
+                Primary = Colors.Blue.Lighten2,
+            },
+
+            LayoutProperties = new LayoutProperties()
+            {
+                DrawerWidthLeft = "260px",
+                DrawerWidthRight = "300px",
+            }
+
+
+        };
+
+
+
+    public bool _isDarkMode = false;
+
+    private string CurrentImage => _isDarkMode ? "images/404t.png" : "images/404s.png";
+
+
+
+
+    // <link rel="stylesheet" href="css/front.css" />
+
+
+
+
+    // public string tema => _isDarkMode ? "darkmode" : "lightmode";
+
+
+
+}

@@ -1,0 +1,41 @@
+﻿
+
+<MudCarousel class="mud-carousel" style="margin: 0 auto;" ShowArrows="@arrows" ShowBullets="@bullets" EnableSwipeGesture="@enableSwipeGesture" AutoCycle="@autocycle" TData="object">
+   
+    <MudCarouselItem class="mud-carousel-item" Transition="transition">
+        <div class="d-flex" style="height:100%" >
+            <MudImage Src="images/4.jpeg" class="mud-carousel-image" Alt="1" />
+        </div>
+    </MudCarouselItem>
+
+    <MudCarouselItem class="mud-carousel-item" Transition="transition">
+        <div class="d-flex" style="height:100%">
+            <MudImage Src="images/5.jpeg" class="mud-carousel-image" Alt="2" />
+        </div>
+    </MudCarouselItem>
+
+    <MudCarouselItem class="mud-carousel-item" Transition="transition">
+        <div class="d-flex" style="height:100%">
+            <MudImage Src="images/6.jpeg" class="mud-carousel-image" Alt="3" />
+        </div>
+    </MudCarouselItem>
+
+    <MudCarouselItem class="mud-carousel-item" Transition="transition">
+        <div class="d-flex" style="height:100%">
+            <MudImage Src="images/7.jpeg" class="mud-carousel-image" Alt="4" />
+        </div>
+    </MudCarouselItem>
+ 
+</MudCarousel>
+
+
+@code {
+    private bool arrows = true;
+    private bool bullets = true;
+    private bool enableSwipeGesture = true;
+    private bool autocycle = true;
+    private Transition transition = Transition.Fade;
+
+}
+
+

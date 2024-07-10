@@ -1,0 +1,75 @@
+﻿.lightmode {
+    height: 100%;
+    width: 98%;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: rgb(66 66 66);
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.darkmode {
+    height: 100%;
+    width: 98%;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: #4cff00;
+    color: #ffffff;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*.mud-width-full-container {
+    max-height: 400px;
+    max-width: 1200px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative; left: 15px;
+}*/
+
+
+.mud-carousel {
+    width: 97%;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.mud-carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.mud-carousel-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+.space {
+    display: inline-block;
+    width: 116px;
+}
+
+.space2 {
+    display: inline-block;
+    width: 119px;
+}
+
+.spacebar {
+    display: inline-block;
+    width: 30px;
+}

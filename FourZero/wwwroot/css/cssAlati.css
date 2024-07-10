@@ -1,0 +1,21 @@
+﻿.alati {
+    position: relative;
+    padding-top: 10%;
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.alati img {
+    max-width: 120px;
+    max-height: 120px;
+    height: auto;
+    width: 10%;
+}

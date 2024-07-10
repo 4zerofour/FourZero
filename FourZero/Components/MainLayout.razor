@@ -1,0 +1,92 @@
+﻿@inherits LayoutComponentBase
+@using MudBlazor
+
+
+
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+<link rel="stylesheet" href="..wwwroot/css/StylesCustom.css" asp-append-version="true"/>
+
+
+<MudLayout>
+
+    <MudAppBar Style="height:60px;">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Primary" Edge="Edge.Start" OnClick="ToggleDrawer" />
+        <Theme />
+        <div class="hidden-mobile" style="flex-grow: 1;"></div>
+        <MudButton Href="/" StartIcon="@Icons.Material.Filled.Home" Class="mr-8 hidden-mobile">Home</MudButton>
+        <MudButton Href="/projects" StartIcon="@Icons.Material.Filled.LibraryBooks" Class="mr-8 hidden-mobile">Projects</MudButton>
+        <MudButton Href="/team" StartIcon="@Icons.Material.Filled.People" Class="mr-8 hidden-mobile">Our Team</MudButton>
+        <MudButton Href="/contact" StartIcon="@Icons.Material.Filled.Phone" Class="hidden-mobile">Contact</MudButton>
+        <div class="hidden-mobile" style="flex-grow: 1;"></div>
+        <Time />
+    </MudAppBar>
+
+    <MudDrawer @bind-Open="_drawerOpen" Elevation="2" ClipMode="DrawerClipMode.Never" Breakpoint="Breakpoint.Lg" Width="260px">
+        <MudDrawerHeader>
+            <MudText Typo="Typo.h6">Menu</MudText>
+        </MudDrawerHeader>
+        <MudNavMenu>
+            <MudNavLink Href="/" Match="NavLinkMatch.All">
+                <MudIcon Icon="Icons.Material.Filled.Home" /> Home
+            </MudNavLink>
+            <MudNavLink Href="/Projects">
+                <MudIcon Icon="Icons.Material.Filled.Settings" /> Projects
+            </MudNavLink>
+            <MudNavLink Href="/Team">
+                <MudIcon Icon="Icons.Material.Filled.Settings" /> Our Team
+            </MudNavLink>
+            <MudNavLink Href="/Contact">
+                <MudIcon Icon="Icons.Material.Filled.Settings" /> Contact
+            </MudNavLink>
+        </MudNavMenu>
+    </MudDrawer>
+    
+    <MudMainContent Style="min-height: 100vh; display: flex; flex-direction: column;">
+        <MudContainer>
+            @Body
+            <MudScrollToTop>
+                <MudFab Style="color: black; background-color: #ffffff;" StartIcon="@Icons.Material.Filled.KeyboardArrowUp" />
+            </MudScrollToTop>
+        </MudContainer>
+        
+    </MudMainContent>
+
+    <Footer/>
+    
+</MudLayout>
+
+@code {
+
+
+    private bool _drawerOpen = false;
+
+    private void ToggleDrawer()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+
+
+
+
+
+    // private bool IsLoading { get; set; } = true;
+    // private bool LogoLoaded { get; set; } = false;
+
+    // protected override async Task OnInitializedAsync()
+    // {
+    //     // Simulirajte učitavanje podataka
+    //     await Task.Delay(3000);
+
+    //     // Postavite LogoLoaded na true kako bi se pokrenula tranzicija boja loga
+    //     LogoLoaded = true;
+
+    //     // Sačekajte da tranzicija završi
+    //     await Task.Delay(2000);
+
+    //     IsLoading = false;
+    // }
+}

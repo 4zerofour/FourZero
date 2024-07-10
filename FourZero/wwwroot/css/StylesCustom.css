@@ -1,0 +1,84 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial',sans-serif;
+}
+
+
+
+.spacer2 {
+    height: 20px;
+}
+
+.spacer1{
+    height: 40px;
+}
+
+.spacer3 {
+    height: 65px;
+}
+
+.spacer6{
+    height: 1500px;
+}
+
+
+.custom-app-bar{
+    height: 500px !important;
+}
+
+.custom-text-bar {
+    color: #AEEA00;
+    font-weight: bold;
+    font-family: 'Arial',sans-serif;
+}
+
+.background-image {
+    background-image: url('/images/6.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer {
+    background-color: #4cff00;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer div.container {
+    font-size: 12px;
+    color: #666;
+}
+
+
+
+@media (max-width: 1200px) {
+
+    .hidden-mobile {
+        display: none;
+    }
+    .custom-clock {
+        display: none;
+    }
+    .mapa {
+        display: none;
+    }
+    .dmreze {
+        position: relative;
+        display: flex;
+        font-size: 0.5em;
+        justify-content: space-between;
+        margin-right: 5px;
+    }
+    .lokinfo {
+        font-size: x-small;
+    }
+}
